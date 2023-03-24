@@ -1,0 +1,95 @@
+.Layout-Box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .Main-Box {
+    flex: 1;
+    > div {
+      width: 100%;
+      height: 100%;
+      flex: 1;
+    }
+  }
+  .Scrolls {
+    width: 100%;
+    height: 200px;
+    // background-color: red;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @keyframes light {
+      from {
+        box-shadow: 0px 0px 4px rgba(255, 0, 0, 0.399);
+      }
+      to {
+        box-shadow: 0px 0px 16px rgba(255, 0, 0, 0.421);
+      }
+    }
+    .ScrollsMain {
+      margin-top: auto;
+      width: 400px;
+      height: 25px;
+      background-color: none;
+      border-radius: 30px;
+      padding: 4px;
+      backdrop-filter: saturate(180%) blur(1px);
+      border: 1px solid #61575739;
+      display: flex;
+      align-items: center;
+      animation: light 2s ease-in-out infinite alternate;
+      .ScrollsChildren {
+        width: 40px;
+        height: 26px;
+        margin-right: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .Avatar {
+          background-color: #f56a00;
+          width: 30px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          font-size: 6px;
+          cursor: pointer;
+        }
+      }
+      .ScrollsChildren:hover {
+        zoom: 1.4;
+      }
+    }
+  }
+
+  .Header {
+    width: 100%;
+    height: 30px;
+    background-image: linear-gradient(135deg, #465efbbd 10%, #465efb75 100%);
+    .headerTitle {
+      font-size: 10px;
+      padding: 0 4px;
+      color: white;
+    }
+    .School {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 2px;
+    }
+    .Header-Row {
+      height: 100%;
+      :global {
+        .ant-col {
+          height: 100%;
+        }
+      }
+    }
+    .Header-Col {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

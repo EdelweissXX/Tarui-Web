@@ -1,0 +1,34 @@
+{
+  "name": "tauri-project",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "next dev -p 1420",
+    "build": "next build && next export -o dist",
+    "tauri": "tauri dev",
+    "tauri-build": "tauri build"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@tauri-apps/api": "^1.1.0",
+    "antd": "^5.2.2",
+    "dayjs": "^1.11.7",
+    "js-cookie": "^3.0.1",
+    "next": "^12.2.5",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.0",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.1.0",
+    "@types/node": "^18.7.11",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "postcss-px-to-viewport-8-plugin": "^1.2.0",
+    "typescript": "^4.7.4"
+  }
+}
